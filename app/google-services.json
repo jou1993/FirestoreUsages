@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "564169876919",
+    "project_id": "firestoretutorial-ae21b",
+    "storage_bucket": "firestoretutorial-ae21b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564169876919:android:0bac8c584863da22ecb432",
+        "android_client_info": {
+          "package_name": "com.example.firestoretutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564169876919-egmg2oeico2emrp8quc9nrhckcoq69m4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1fJTxHtCR4pHLhC2-mh-XKMIIZt7D-zY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564169876919-egmg2oeico2emrp8quc9nrhckcoq69m4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
