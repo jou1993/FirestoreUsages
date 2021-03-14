@@ -1,10 +1,10 @@
-package com.example.firestoreusages
+package com.example.firestoreUsages
 
 import android.app.Person
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.firestoreusages.databinding.ActivityMainBinding
+import com.example.firestoreUsages.databinding.ActivityMainBinding
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun getOldPerson(): com.example.firestoreusages.Person {
+    private fun getOldPerson(): com.example.firestoreUsages.Person {
         val firstName = binding.etFirstName.text.toString()
         val lastName = binding.etLastName.text.toString()
         val age = binding.etAge.text.toString().toInt()
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         return map
     }
 
-    private fun deletePersosn(person: com.example.firestoreusages.Person) =
+    private fun deletePersosn(person: com.example.firestoreUsages.Person) =
         CoroutineScope(Dispatchers.IO).launch {
             val personQuery = personCollectionRef
                 .whereEqualTo("firstName", person.firstName)
@@ -132,7 +132,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     private fun updatePersosn(
-        person: com.example.firestoreusages.Person,
+        person: com.example.firestoreUsages.Person,
         newPersonMap: Map<String, Any>
     ) = CoroutineScope(
         Dispatchers.IO
@@ -209,7 +209,7 @@ class MainActivity : AppCompatActivity() {
             querySnapshot?.let {
                 val sb = StringBuilder()
                 for (document in it) {
-                    val person = document.toObject(com.example.firestoreusages.Person::class.java)
+                    val person = document.toObject(com.example.firestoreUsages.Person::class.java)
                     sb.append("$person\n")
                 }
                 binding.tvPersons.text = sb.toString()
@@ -243,7 +243,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun savePerson(person: com.example.firestoreusages.Person) = CoroutineScope(Dispatchers.IO).launch {
+    private fun savePerson(person: com.example.firestoreUsages.Person) = CoroutineScope(Dispatchers.IO).launch {
         try {
             personCollectionRef.add(person).await()
             withContext(Dispatchers.Main) {

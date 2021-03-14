@@ -1,4 +1,4 @@
-package com.example.firestoreusages
+package com.example.firestoreUsages
 
 import org.junit.Test
 
